@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <a href="/blogs" class="title">Blogger</a>
+      <a href="http://localhost:3000/blogs/show" class="btn">See blogs</a>
+    </div>
+
+    <h1>Create new Blog</h1>
+    <form action="/blogs" method="post">
+      <div class="p-container">
+        <div class="c-container">
+          <p>
+            <span class="container-el">Username:</span>&nbsp;&nbsp;
+            <input type="text" name="username" id="" />
+          </p>
+          <p>
+            <span class="container-el">Blogtopic:</span>&nbsp;&nbsp;
+            <input type="text" name="Blogtopic" id="" />
+          </p>
+          <p>
+            <span class="container-el">Authorname:</span>&nbsp;&nbsp;
+            <input type="text" name="authorname" id="" />
+          </p>
+          <p>
+            <span class="container-el">Blog:</span>&nbsp;&nbsp;<br />
+            <textarea name="blog" id="" cols="65" rows="8"></textarea>
+          </p>
+
+          <button class="btn">Submit</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

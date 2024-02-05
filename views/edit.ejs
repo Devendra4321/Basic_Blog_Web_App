@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update blog</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <a href="/blogs" class="title">Blogger</a>
+      <a href="http://localhost:3000/blogs/show" class="btn">See blogs</a>
+    </div>
+
+    <h1>Update blog</h1>
+
+    <div class="p-container">
+      <div class="c-container">
+        <p>
+          <span class="container-el">Username:</span
+          >&nbsp;&nbsp;<%=blog.username%>
+        </p>
+        <p>
+          <span class="container-el">Blogtopic:</span
+          >&nbsp;&nbsp;<%=blog.blogtopic%>
+        </p>
+        <p>
+          <span class="container-el">Authorname:</span
+          >&nbsp;&nbsp;<%=blog.authorname%>
+        </p>
+        <form action="/blogs/<%=blog.id%>?_method=PATCH" method="post">
+          <p>
+            <span class="container-el">Blog:</span>&nbsp;&nbsp;<br />
+            <textarea name="blog" id="" cols="65" rows="8">
+<%=blog.blog%></textarea
+            >
+          </p>
+
+          <button class="btn">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

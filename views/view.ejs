@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All blogs</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <a href="/blogs" class="title">Blogger</a>
+      <a href="http://localhost:3000/blogs/new" class="btn">Create new blog</a>
+    </div>
+
+    <h1>All blogs</h1>
+    <div class="main-container">
+      <% for(blog of blogs){ %>
+      <div class="container">
+        <p><span class="container-el">ID:</span>&nbsp;&nbsp;<%=blog.id%></p>
+        <p>
+          <span class="container-el">Username:</span
+          >&nbsp;&nbsp;@<%=blog.username%>
+        </p>
+        <p>
+          <span class="container-el">Blogtopic:</span
+          >&nbsp;&nbsp;<%=blog.blogtopic%>
+        </p>
+        <p>
+          <span class="container-el">Authorname:</span
+          >&nbsp;&nbsp;<%=blog.authorname%>
+        </p>
+        <p><span class="container-el">Blog:</span>&nbsp;&nbsp;<%=blog.blog%></p>
+
+        <a href="http://localhost:3000/blogs/<%=blog.id%>" class="view-a"
+          >Get details</a
+        >
+        <a href="http://localhost:3000/blogs/<%=blog.id%>/edit" class="view-a"
+          >Edit blog</a
+        >
+        <br /><br />
+        <form action="/blogs/<%=blog.id%>?_method=DELETE" method="post">
+          <button class="view-a">Delete</button>
+        </form>
+      </div>
+      <% } %>
+    </div>
+  </body>
+</html>

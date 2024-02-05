@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog detail</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <a href="/blogs" class="title">Blogger</a>
+      <a href="http://localhost:3000/blogs/new" class="btn">Create new blog</a>
+    </div>
+
+    <h1>Blog detail</h1>
+
+    <div class="newm-container">
+      <div class="new-container">
+        <p>
+          <span class="container-el">Username:</span
+          >&nbsp;&nbsp;@<%=blog.username%>
+        </p>
+        <p>
+          <span class="container-el">Blogtopic:</span
+          >&nbsp;&nbsp;<%=blog.blogtopic%>
+        </p>
+        <p>
+          <span class="container-el">Authorname:</span
+          >&nbsp;&nbsp;<%=blog.authorname%>
+        </p>
+        <p><span class="container-el">Blog:</span>&nbsp;&nbsp;<%=blog.blog%></p>
+      </div>
+    </div>
+  </body>
+</html>
